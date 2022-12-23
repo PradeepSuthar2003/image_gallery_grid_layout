@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: pog;
+            font-weight: 100;
+        }
+         
+        @font-face {
+            font-family: pog;
+            src: url(./Font/Rubik-Regular.ttf);
+        }
+
+        body{
+            background-color: rgb(237, 220, 220);
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: repeat(2,250px);
+            grid-auto-rows: 250px;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            grid-gap: 2rem;
+            text-align: center;
+        }
+        
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            width: 100vw;
+            height: 10vh;
+            margin-bottom: 25px;
+            background-color: rgb(18, 25, 82);
+            color: white;
+        }
+
+        img{
+            filter: drop-shadow(0 2px 5px rgb(0,0,0,0.5));
+            transition: all .8s;
+        }
+
+        img:hover{
+            transform: scale(1.1);
+            filter: drop-shadow(0 2px 10px rgb(0,0,0,0.5));
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Image Gallery</h2>
+    <div class="main">
+        <div class="div1"><img src="https://picsum.photos/250/250?random=1"></div>
+        <div class="div2"><img src="https://picsum.photos/250/250?random=2"></div>
+        <div class="div3"><img src="https://picsum.photos/250/250?random=3"></div>
+        <div class="div4"><img src="https://picsum.photos/250/250?random=4"></div>
+        <div class="div5"><img src="https://picsum.photos/250/250?random=5"></div>
+        <div class="div6"><img src="https://picsum.photos/250/250?random=6"></div>
+        <div class="div7"><img src="https://picsum.photos/250/250?random=7"></div>
+    </div>
+</body>
+
+</html>
